@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> API modelo Preditivo </title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Modelo preditivo de próxima compra</h1>
+        <h2>Digite abaixo o valor das últimas 4 compras do cliente</h2>
+        <form action="/predict" method="post">
+            <input type="text" name="feature1" placeholder="Valor Compra 1" required="required"/>
+            <input type="text" name="feature2" placeholder="Valor Compra 2" required="required"/>
+            <input type="text" name="feature3" placeholder="Valor Compra 3" required="required"/>
+            <input type="text" name="feature4" placeholder="Valor Compra 4" required="required"/>
+            <button type="submit">Prevever</button>
+        </form>
+
+        {% if prediction_text %}
+            <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
