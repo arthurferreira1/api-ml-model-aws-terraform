@@ -1,0 +1,1 @@
+aws s3 cp /iac/app_ml s3://arthur-926799968519-bucket/ --recursive
